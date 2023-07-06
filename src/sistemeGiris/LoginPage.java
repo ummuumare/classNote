@@ -9,19 +9,26 @@ public class LoginPage {
         start();
     }
     public  static void start(){
+        UserService service = new UserService();
+
      int selection;
       do {
           showMenu();
           selection =input.nextInt();
           switch (selection){
               case 1:
-                  //Uye olma
+              service.register();
+                  System.out.println(service.userNames);
+                  System.out.println(service.emails);
+                  System.out.println(service.passwords);
                   break;
               case 2:
-                  //giris yapma
+
+                  service.login();
+
                   break;
               case 0:
-                  System.out.println("iyi gunler bekleriz");
+                  System.out.println("iyi gunler TEKRARDAN bekleriz");
                   break;
               default:
                   System.out.println("Hatali giris yaptiniz, tekrar deneyinz...");

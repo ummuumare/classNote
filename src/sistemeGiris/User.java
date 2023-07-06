@@ -1,13 +1,13 @@
 package sistemeGiris;
 
-public class PojoClass {
+public class User {
    private  String name;
    private String surname;
    private String accountId;
    private String email;
    private String password;
 
-    public PojoClass(String name, String surname, String accountId, String email, String password) {
+    public User(String name, String surname, String accountId, String email) {
         this.name = name;
         this.surname = surname;
         this.accountId = accountId;
